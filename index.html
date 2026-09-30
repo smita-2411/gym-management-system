@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>🏋️ GYM</h2>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#members">Members</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#plans">Membership Plans</a>
+    <a href="#payments">Payments</a>
+    <a href="#contact">Contact</a>
+  </aside>
+
+  <main class="main">
+    <header>
+      <h2>Gym Management System</h2>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <section id="dashboard">
+      <h1>Dashboard</h1>
+      <div class="cards">
+        <div class="card"><h3>Total Members</h3><h1 id="totalMembers">0</h1></div>
+        <div class="card"><h3>Trainers</h3><h1>5</h1></div>
+        <div class="card"><h3>Membership Plans</h3><h1>3</h1></div>
+        <div class="card"><h3>Total Revenue</h3><h1>₹25,000</h1></div>
+      </div>
+    </section>
+
+    <section id="members">
+      <h2>Member Management</h2>
+      <div class="form">
+        <input type="text" id="name" placeholder="Member Name" aria-label="Member name">
+        <input type="email" id="email" placeholder="Email" aria-label="Email">
+        <input type="text" id="phone" placeholder="Phone Number" aria-label="Phone number">
+        <select id="plan" aria-label="Membership plan">
+          <option value="">Select Plan</option>
+          <option>Monthly</option><option>Quarterly</option><option>Yearly</option>
+        </select>
+        <button onclick="addMember()">Add Member</button>
+      </div>
+      <input type="text" id="search" placeholder="Search Members..." onkeyup="searchMember()" aria-label="Search members">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Plan</th><th>Action</th></tr></thead>
+          <tbody id="memberList"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="trainers">
+      <h2>Our Trainers</h2>
+      <div class="trainer-container">
+        <div class="trainer"><h3>Amit Sharma</h3><p>Fitness Trainer</p></div>
+        <div class="trainer"><h3>Neha Singh</h3><p>Yoga Trainer</p></div>
+        <div class="trainer"><h3>Rahul Patil</h3><p>Strength Coach</p></div>
+      </div>
+    </section>
+
+    <section id="plans">
+      <h2>Membership Plans</h2>
+      <div class="trainer-container">
+        <div class="trainer"><h3>Monthly Plan</h3><h2>₹1,000</h2><p>30 Days Access</p></div>
+        <div class="trainer"><h3>Quarterly Plan</h3><h2>₹2,500</h2><p>90 Days Access</p></div>
+        <div class="trainer"><h3>Yearly Plan</h3><h2>₹8,000</h2><p>365 Days Access</p></div>
+      </div>
+    </section>
+
+    <section id="payments"><h2>Payment Management</h2><p>Manage membership payments and records.</p></section>
+    <section id="contact"><h2>Contact Us</h2><p>Email: gymmanagement@gmail.com</p><p>Phone: +91 9876543210</p></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
